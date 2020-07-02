@@ -8,6 +8,6 @@ docker push cas0559/multi-client:$SHA
 docker push cas0559/multi-server:$SHA
 docker push cas0559/multi-worker:$SHA
 kubectl apply -f k8s
-kubectl set image deployment/multi-client client=cas0559/multi-client:$SHA
-kubectl set image deployment/multi-server server=cas0559/multi-server:$SHA
-kubectl set image deployment/multi-worker worker=cas0559/multi-worker:$SHA
+kubectl set image deployment/client-deployment client=cas0559/multi-client:$SHA
+kubectl set image deployment/server-deployment server=cas0559/multi-server:$SHA
+kubectl set image deployment/worker-deployment worker=cas0559/multi-worker:$SHA
